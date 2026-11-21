@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDZ İnşaat | Çatalca İnşaat Firması & Anahtar Teslim Yapı Çözümleri</title>
+    <meta name="description" content="EDZ İnşaat & Gayrimenkul, Çatalca ve İstanbul genelinde anahtar teslim inşaat, kaba inşaat, radyal temel, subasman, su kuyusu, foseptik ve çevre düzenleme hizmetleri sunmaktadır.">
+    <meta name="keywords" content="Çatalca İnşaat Firması, Çatalca Müteahhit, Çatalca Villa Yapımı, Çatalca Anahtar Teslim Ev, Çatalca Radyal Temel, Çatalca Subasman Temel, Çatalca Kaba İnşaat, Çatalca Su Kuyusu, Çatalca Foseptik Kuyusu, Çatalca Bahçe Duvarı, Çatalca Panel Çit">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#1e3a8a',
+                            accent: '#d97706',
+                            accentHover: '#b45309',
+                            light: '#f8fafc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.85)), url('images/hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-slate-800 antialiased">
+
+    <!-- Top Info Bar -->
+    <div class="bg-brand-dark text-slate-300 text-xs py-2.5 border-b border-slate-800 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span><i class="fa-solid fa-location-dot text-brand-accent mr-1.5"></i> Çanakça Mah. Çınar Sok. No:74/A, Çatalca / İstanbul</span>
+                <a href="mailto:info@edzinsaat.com.tr" class="hover:text-white transition"><i class="fa-solid fa-envelope text-brand-accent mr-1.5"></i> info@edzinsaat.com.tr</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-amber-400 font-medium">Çatalca'nın Güvenilir İnşaat ve Mühendislik Firması</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3">
+                    <div class="w-11 h-11 bg-brand-dark rounded-lg flex items-center justify-center border-b-4 border-brand-accent">
+                        <span class="text-white font-extrabold text-xl tracking-tighter">EDZ</span>
+                    </div>
+                    <div>
+                        <span class="block text-xl font-extrabold text-brand-dark tracking-tight leading-none">EDZ İNŞAAT</span>
+                        <span class="block text-[11px] font-semibold text-slate-500 tracking-widest uppercase mt-0.5">& Gayrimenkul</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-8 font-semibold text-sm text-slate-700">
+                    <a href="#anasayfa" class="hover:text-brand-accent transition">Ana Sayfa</a>
+                    <a href="#hakkimizda" class="hover:text-brand-accent transition">Hakkımızda</a>
+                    <a href="#hizmetlerimiz" class="hover:text-brand-accent transition">Hizmetlerimiz</a>
+                    <a href="#projelerimiz" class="hover:text-brand-accent transition">Projelerimiz</a>
+                    <a href="#blog" class="hover:text-brand-accent transition">Blog</a>
+                    <a href="#iletisim" class="hover:text-brand-accent transition">İletişim</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="tel:+905075169552" class="bg-brand-accent hover:bg-brand-accentHover text-white font-bold text-sm px-5 py-2.5 rounded-lg shadow-sm transition flex items-center">
+                        <i class="fa-solid fa-phone mr-2"></i> 0507 516 95 52
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-slate-700 hover:text-brand-dark focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-5 space-y-2 shadow-lg">
+            <a href="#anasayfa" class="block py-2 font-semibold text-slate-700 hover:text-brand-accent">Ana Sayfa</a>
+            <a href="#hakkimizda" class="block py-2 font-semibold text-slate-700 hover:text-brand-accent">Hakkımızda</a>
+            <a href="#hizmetlerimiz" class="block py-2 font-semibold text-slate-700 hover:text-brand-accent">Hizmetlerimiz</a>
+            <a href="#projelerimiz" class="block py-2 font-semibold text-slate-700 hover:text-brand-accent">Projelerimiz</a>
+            <a href="#blog" class="block py-2 font-semibold text-slate-700 hover:text-brand-accent">Blog</a>
+            <a href="#iletisim" class="block py-2 font-semibold text-slate-700 hover:text-brand-accent">İletişim</a>
+            <div class="pt-2">
+                <a href="tel:+905075169552" class="block text-center bg-brand-accent text-white font-bold py-3 rounded-lg">
+                    <i class="fa-solid fa-phone mr-2"></i> +90 507 516 95 52
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="anasayfa" class="hero-bg text-white py-24 lg:py-32 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <span class="inline-block bg-brand-accent/20 border border-brand-accent text-amber-300 text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-5">
+                    Çatalca & İstanbul Bölgesi Yapı Çözümleri
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Güven İnşa Ediyoruz, <span class="text-brand-accent">Geleceği Şekillendiriyoruz</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed">
+                    Çatalca'nın güvenilir inşaat firması olarak; anahtar teslim projelerden kaba inşaata, radyal ve subasman temelden altyapı ve çevre düzenlemeye kadar profesyonel mühendislik çözümleri sunuyoruz.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#iletisim" class="bg-brand-accent hover:bg-brand-accentHover text-white font-bold px-8 py-4 rounded-lg text-center shadow-lg transition flex items-center justify-center">
+                        Ücretsiz Keşif & Teklif Al <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="https://wa.me/905075169552?text=Merhaba,%20EDZ%20İnşaat%20web%20sitesinden%20ulaşıyorum.%20Bilgi%20almak%20istiyorum." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-lg text-center shadow-lg transition flex items-center justify-center">
+                        <i class="fa-brands fa-whatsapp text-xl mr-2"></i> WhatsApp ile İletişime Geç
+                    </a>
+                </div>
+
+                <!-- Quick Highlights -->
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mt-12 pt-8 border-t border-slate-700/80 text-xs font-semibold text-slate-300">
+                    <div class="flex items-center"><i class="fa-solid fa-check text-brand-accent mr-2"></i> Anahtar Teslim</div>
+                    <div class="flex items-center"><i class="fa-solid fa-check text-brand-accent mr-2"></i> Kaba İnşaat</div>
+                    <div class="flex items-center"><i class="fa-solid fa-check text-brand-accent mr-2"></i> Temel Sistemleri</div>
+                    <div class="flex items-center"><i class="fa-solid fa-check text-brand-accent mr-2"></i> Altyapı & Kuyu</div>
+                    <div class="flex items-center"><i class="fa-solid fa-check text-brand-accent mr-2"></i> Peyzaj & Çit</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımızda & Misyon/Vizyon -->
+    <section id="hakkimizda" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-brand-accent font-bold text-sm uppercase tracking-wider">Kurumsal</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-2 mb-6">
+                        Temelden Çatıya Sağlam Mühendislik ve Kaliteli İşçilik
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        <strong>EDZ İnşaat & Gayrimenkul</strong>, İstanbul Çatalca merkezli olarak faaliyet gösteren; inşaat, taahhüt ve gayrimenkul alanlarında profesyonel hizmet sunan köklü bir yapı firmasıdır.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        Temelden çatıya kadar tüm süreçleri titizlikle yöneten firmamız; konut, villa, çiftlik yapıları, prefabrik yapılar ve ticari projelerde güvenilir uygulamalar gerçekleştirmekte, projelerin her aşamasında kalite standartlarını ön planda tutmaktadır.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-6 mt-8">
+                        <div class="bg-slate-50 p-5 rounded-xl border-l-4 border-brand-accent">
+                            <h3 class="font-bold text-brand-dark text-lg mb-2"><i class="fa-solid fa-bullseye text-brand-accent mr-2"></i>Misyonumuz</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Müşterilerimize güvenilir, ekonomik ve uzun ömürlü yapı çözümleri sunarak yaşam alanlarına değer katmak.
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 p-5 rounded-xl border-l-4 border-brand-dark">
+                            <h3 class="font-bold text-brand-dark text-lg mb-2"><i class="fa-solid fa-eye text-brand-dark mr-2"></i>Vizyonumuz</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Çatalca ve İstanbul bölgesinde güvenilirliği, iş kalitesi ve müşteri memnuniyeti ile tercih edilen inşaat firmaları arasında yer almak.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img src="images/about.jpg" alt="EDZ İnşaat Çatalca" class="rounded-2xl shadow-xl object-cover w-full h-[460px]">
+                    <div class="absolute -bottom-6 -left-6 bg-brand-dark text-white p-6 rounded-xl shadow-xl hidden sm:block">
+                        <p class="text-3xl font-extrabold text-brand-accent">%100</p>
+                        <p class="text-sm font-semibold mt-1">Mühendislik ve Kalite Güvencesi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hizmetlerimiz (11 Hizmet Tam Liste) -->
+    <section id="hizmetlerimiz" class="py-20 bg-slate-50 border-t border-slate-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-accent font-bold text-sm uppercase tracking-wider">Neler Yapıyoruz?</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-2 mb-4">Kapsamlı İnşaat, Temel ve Altyapı Hizmetlerimiz</h2>
+                <p class="text-slate-600">Arsanızın ilk kazısından anahtar teslim yaşam alanınıza kadar tüm inşaat ve çevre düzenleme ihtiyaçlarınızı tek elden çözüyoruz.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1 -->
+                <div class="bg-white p-7 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div class="w-12 h-12 bg-amber-100 text-brand-accent rounded-xl flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Anahtar Teslim İnşaat</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Proje planlama ve ruhsat aşamasından yapı teslimine kadar tüm mimari ve mühendislik süreçlerinin eksiksiz yönetilmesi.</p>
+                    <span class="text-xs font-semibold text-slate-400">/anahtar-teslim-insaat</span>
+                </div>
+
+                <!-- 2 -->
+                <div class="bg-white p-7 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div class="w-12 h-12 bg-amber-100 text-brand-accent rounded-xl flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Kaba İnşaat</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Deprem yönetmeliğine uygun temel, kolon, perde beton, döşeme ve betonarme taşıyıcı sistem uygulamaları.</p>
+                    <span class="text-xs font-semibold text-slate-400">/kaba-insaat</span>
+                </div>
+
+                <!-- 3 -->
+                <div class="bg-white p-7 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div class="w-12 h-12 bg-amber-100 text-brand-accent rounded-xl flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Subasman Temel</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Yapının zemin neminden korunması, güvenli ve sağlam bir başlangıç yapabilmesi için profesyonel subasman temel uygulamaları.</p>
+                    <span class="text-xs font-semibold text-slate-400">/subasman-temel</span>
+                </div>
+
+                <!-- 4 -->
+                <div class="bg-white p-7 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div class="w-12 h-12 bg-amber-100 text-brand-accent rounded-xl flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-trowel-bricks"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Radyal Temel</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Zeminin geoteknik özelliklerine uygun, yükü eşit dağıtan yüksek taşıma kapasitesine sahip radye temel çözümleri.</p>
+                    <span class="text-xs font-semibold text-slate-400">/radyal-temel</span>
+                </div>
+
+                <!-- 5 -->
+                <div class="bg-white p-7 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div class="w-12 h-12 bg-amber-100 text-brand-accent rounded-xl flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Prefabrik Yapı Temelleri</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Prefabrik evler, çelik konstrüksiyon ve bungalov yapılar için terazi hassasiyetinde özel beton temel hazırlıkları.</p>
+                    <span class="text-xs font-semibold text-slate-400">/prefabrik-yapi-temeli</span>
+                </div>
+
+                <!-- 6 -->
+                <div class="bg-white p-7 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div class="w-12 h-12 bg-amber-100 text-brand-accent rounded-xl flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Su Kuyusu Açma</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Tarla, çiftlik, bağ evi ve kırsal yaşam alanları için kesintisiz su temini sağlayan profesyonel su kuyusu uygulamaları.</p>
+                    <span class="text-xs font-semibold text-slate-400">/su-kuyusu-acma</span>
+                </div>
+
+                <!-- 7 -->
+                <div class="bg-white p-7 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div class="w-12 h-12 bg-amber-100 text-brand-accent rounded-xl flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-circle-dot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Foseptik Kuyusu</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Kanalizasyon altyapısının bulunmadığı kırsal ve müstakil bölgeler için sızdırmaz, standartlara uygun foseptik çözümleri.</p>
+                    <span class="text-xs font-semibold text-slate-400">/foseptik-kuyusu</span>
+                </div>
+
+                <!-- 8 -->
+                <div class="bg-white p-7 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div class="w-12 h-12 bg-amber-100 text-brand-accent rounded-xl flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-border-all"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Bahçe Duvarı Uygulamaları</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Estetik taş desenli betonarme istinat ve bahçe duvarları ile dayanıklı özel arazi çevreleme sistemleri.</p>
+                    <span class="text-xs font-semibold text-slate-400">/bahce-duvari-yapimi</span>
+                </div>
+
+                <!-- 9 -->
+                <div class="bg-white p-7 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div class="w-12 h-12 bg-amber-100 text-brand-accent rounded-xl flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Panel Çit Sistemleri</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Arsa, tarla, villa ve ticari yapı çevre güvenliği için uzun ömürlü, galvanizli modern panel çit montajı.</p>
+                    <span class="text-xs font-semibold text-slate-400">/panel-cit-sistemleri</span>
+                </div>
+
+                <!-- 10 -->
+                <div class="bg-white p-7 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div class="w-12 h-12 bg-amber-100 text-brand-accent rounded-xl flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Peyzaj ve Çevre Düzenleme</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Kilit taşı, yürüyüş yolları, bahçe tasarımı ve yaşam alanınıza değer katan estetik çevre düzenleme uygulamaları.</p>
+                    <span class="text-xs font-semibold text-slate-400">/peyzaj-duzenleme</span>
+                </div>
+
+                <!-- 11 -->
+                <div class="bg-white p-7 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100">
+                    <div class="w-12 h-12 bg-amber-100 text-brand-accent rounded-xl flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-hammer"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Tadilat ve Yenileme</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Mevcut ev, villa, iş yeri ve ticari yapılarda komple iç-dış cephe yenileme, güçlendirme ve dekorasyon çalışmaları.</p>
+                    <span class="text-xs font-semibold text-slate-400">/tadilat-ve-yenileme</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projelerimiz (Örnek Vitrin) -->
+    <section id="projelerimiz" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-brand-accent font-bold text-sm uppercase tracking-wider">Uygulamalarımız</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-2">Öne Çıkan Çalışma Alanlarımız</h2>
+                </div>
+                <p class="text-slate-500 text-sm mt-3 md:mt-0">Çatalca ve çevre köylerde tamamladığımız yapı ve altyapı çözümleri</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group rounded-2xl overflow-hidden shadow-md bg-slate-900 relative h-80">
+                    <img src="images/proje-villa.jpg" alt="Çatalca Villa İnşaatı" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent p-6 flex flex-col justify-end">
+                        <span class="text-amber-400 text-xs font-bold uppercase">Anahtar Teslim</span>
+                        <h3 class="text-white text-xl font-bold mt-1">Müstakil Villa & Çiftlik Evleri</h3>
+                        <p class="text-slate-300 text-xs mt-1">Çatalca Merkez & Çanakça Bölgesi</p>
+                    </div>
+                </div>
+
+                <div class="group rounded-2xl overflow-hidden shadow-md bg-slate-900 relative h-80">
+                    <img src="images/proje-temel.jpg" alt="Radyal ve Subasman Temel" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent p-6 flex flex-col justify-end">
+                        <span class="text-amber-400 text-xs font-bold uppercase">Temel & Kaba İnşaat</span>
+                        <h3 class="text-white text-xl font-bold mt-1">Radyal Temel & Subasman Uygulamaları</h3>
+                        <p class="text-slate-300 text-xs mt-1">Prefabrik ve Betonarme Yapı Altyapıları</p>
+                    </div>
+                </div>
+
+                <div class="group rounded-2xl overflow-hidden shadow-md bg-slate-900 relative h-80">
+                    <img src="images/proje-bahce.jpg" alt="Bahçe Duvarı ve Peyzaj" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent p-6 flex flex-col justify-end">
+                        <span class="text-amber-400 text-xs font-bold uppercase">Çevre Güvenliği & Altyapı</span>
+                        <h3 class="text-white text-xl font-bold mt-1">Desenli Bahçe Duvarı, Panel Çit & Kuyu</h3>
+                        <p class="text-slate-300 text-xs mt-1">Arazi Çevreleme, Su ve Foseptik Kuyusu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog & Bilgi Rehberi (SEO İçerik Planı) -->
+    <section id="blog" class="py-20 bg-slate-50 border-t border-slate-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-brand-accent font-bold text-sm uppercase tracking-wider">Bilgi Rehberi & Blog</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-2 mb-4">İnşaat ve Arsa Yatırımı Hakkında Merak Edilenler</h2>
+                <p class="text-slate-600">Çatalca'da arsa üzerine ev yapımı, temel çeşitleri ve altyapı maliyetleri hakkında teknik rehberlerimiz.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <article class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                    <span class="text-xs font-bold text-brand-accent bg-amber-50 px-3 py-1 rounded-full">Temel Sistemleri</span>
+                    <h3 class="text-lg font-bold text-brand-dark mt-4 mb-2">Radyal Temel Nedir? Subasman Temel Nasıl Yapılır?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Zemin yapısına göre doğru temel seçimi yapının ömrünü belirler. Radye temel ile subasman arasındaki farklar ve uygulama aşamaları...</p>
+                    <a href="#iletisim" class="text-sm font-bold text-brand-dark hover:text-brand-accent transition">Detaylı Bilgi Al →</a>
+                </article>
+
+                <article class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                    <span class="text-xs font-bold text-brand-accent bg-amber-50 px-3 py-1 rounded-full">Maliyet & Süreç</span>
+                    <h3 class="text-lg font-bold text-brand-dark mt-4 mb-2">Çatalca'da Ev Yapma Maliyeti ve Villa Yapım Süreci</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Çatalca bölgesinde arsa üzerine anahtar teslim villa veya prefabrik ev yaptırırken dikkat edilmesi gereken ruhsat ve maliyet kalemleri...</p>
+                    <a href="#iletisim" class="text-sm font-bold text-brand-dark hover:text-brand-accent transition">Keşif Talep Et →</a>
+                </article>
+
+                <article class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                    <span class="text-xs font-bold text-brand-accent bg-amber-50 px-3 py-1 rounded-full">Altyapı & Çevre</span>
+                    <h3 class="text-lg font-bold text-brand-dark mt-4 mb-2">Su Kuyusu, Foseptik Ölçüleri ve Bahçe Duvarı Rehberi</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Kırsal alanlarda su kuyusu açtırırken dikkat edilmesi gerekenler, foseptik kuyusu standartları ve panel çit / bahçe duvarı seçimi...</p>
+                    <a href="#iletisim" class="text-sm font-bold text-brand-dark hover:text-brand-accent transition">Uzmana Danış →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Section -->
+    <section id="iletisim" class="py-20 bg-brand-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <span class="text-brand-accent font-bold text-sm uppercase tracking-wider">İletişim</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-6">Projeniz İçin Ücretsiz Keşif ve Fiyat Teklifi Alın</h2>
+                    <p class="text-slate-300 leading-relaxed mb-8">
+                        Çatalca ve İstanbul genelindeki inşaat, temel, kuyu ve çevre düzenleme talepleriniz için bizimle doğrudan iletişime geçebilirsiniz.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-brand-accent shrink-0">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Merkez Ofis Adresimiz</h4>
+                                <p class="text-slate-300 text-sm mt-1">Çanakça Mahallesi, Çınar Sokak No:74/A, Çatalca / İstanbul</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-brand-accent shrink-0">
+                                <i class="fa-solid fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Telefon & WhatsApp</h4>
+                                <a href="tel:+905075169552" class="text-slate-300 hover:text-brand-accent text-sm mt-1 block">+90 507 516 95 52</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-brand-accent shrink-0">
+                                <i class="fa-solid fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">E-Posta Adresimiz</h4>
+                                <a href="mailto:info@edzinsaat.com.tr" class="text-slate-300 hover:text-brand-accent text-sm mt-1 block">info@edzinsaat.com.tr</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teklif Formu (WhatsApp Entegreli - Statik Sitede Sorunsuz Çalışır) -->
+                <div class="bg-white text-slate-800 p-8 rounded-2xl shadow-xl">
+                    <h3 class="text-2xl font-bold text-brand-dark mb-2">Hızlı Teklif Formu</h3>
+                    <p class="text-slate-500 text-sm mb-6">Bilgilerinizi doldurun, talebiniz doğrudan WhatsApp hattımıza iletilsin.</p>
+                    
+                    <form id="whatsapp-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Adınız Soyadınız</label>
+                            <input type="text" id="wa-name" required placeholder="Örn: Ahmet Yılmaz" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-accent focus:outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Telefon Numaranız</label>
+                            <input type="tel" id="wa-phone" required placeholder="05XX XXX XX XX" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-accent focus:outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Hizmet Seçiniz</label>
+                            <select id="wa-service" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-accent focus:outline-none text-sm bg-white">
+                                <option>Anahtar Teslim İnşaat / Villa</option>
+                                <option>Kaba İnşaat</option>
+                                <option>Radyal Temel / Subasman Temel</option>
+                                <option>Prefabrik Yapı Temeli</option>
+                                <option>Su Kuyusu / Foseptik Kuyusu</option>
+                                <option>Bahçe Duvarı / Panel Çit</option>
+                                <option>Peyzaj ve Çevre Düzenleme</option>
+                                <option>Tadilat ve Yenileme</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Proje Detayı / Arsa Konumu</label>
+                            <textarea id="wa-message" rows="3" placeholder="Arsanızın bulunduğu mahalle ve yaptırmak istediğiniz iş hakkında kısa bilgi..." class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-accent focus:outline-none text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-accent hover:bg-brand-accentHover text-white font-bold py-3.5 rounded-lg shadow-md transition flex items-center justify-center">
+                            <i class="fa-brands fa-whatsapp text-lg mr-2"></i> WhatsApp Üzerinden Teklif Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800/80 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <span class="font-bold text-white">EDZ İnşaat & Gayrimenkul</span> — Tüm Hakları Saklıdır. © 2026
+            </div>
+            <div class="text-xs text-slate-500">
+                www.edzinsaat.com.tr | Çatalca / İstanbul
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/905075169552" target="_blank" aria-label="WhatsApp İletişim" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl z-50 transition transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // WhatsApp Form Submission
+        document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('wa-name').value;
+            const phone = document.getElementById('wa-phone').value;
+            const service = document.getElementById('wa-service').value;
+            const msg = document.getElementById('wa-message').value;
+
+            const text = `Merhaba EDZ İnşaat,%0A*Ad Soyad:* ${encodeURIComponent(name)}%0A*Telefon:* ${encodeURIComponent(phone)}%0A*Hizmet:* ${encodeURIComponent(service)}%0A*Detay:* ${encodeURIComponent(msg)}`;
+            window.open(`https://wa.me/905075169552?text=${text}`, '_blank');
+        });
+    </script>
+</body>
+</html>
